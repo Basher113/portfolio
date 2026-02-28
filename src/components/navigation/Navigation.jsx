@@ -1,3 +1,4 @@
+import { useTheme } from 'styled-components';
 import Button from '../ui/button/Button';
 import { 
   Nav, 
@@ -7,12 +8,16 @@ import {
   NavLinks,
   NavLink 
 } from './Navigation.styles';
+import LogoImage from "../../assets/logo.webp";
+import LogoImageDark from "../../assets/logoDark.webp";
+const Navigation = ({ logoText = "Basher Kalim", navItems = [] }) => {
+  const theme = useTheme();
 
-const Navigation = ({ logoText = "Alex.Dev", navItems = [] }) => {
   return (
     <Nav>
       <NavContainer>
-        <Logo>
+        <Logo href='#hero'>
+          {theme.dark ? <img src={LogoImage} alt="logo" height={20} width={20}/> : <img src={LogoImageDark} alt="logo" height={20} width={20}/>}
           <LogoText>{logoText}</LogoText>
         </Logo>
         

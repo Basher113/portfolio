@@ -20,10 +20,12 @@ export const NavContainer = styled.div`
   padding: 0 1.5rem;
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-decoration: none;
+
 `;
 
 export const LogoText = styled.span`
