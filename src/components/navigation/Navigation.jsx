@@ -10,15 +10,23 @@ import {
 } from './Navigation.styles';
 import LogoImage from "../../assets/logo.webp";
 import LogoImageDark from "../../assets/logoDark.webp";
-const Navigation = ({ logoText = "Basher Kalim", navItems = [] }) => {
+const Navigation = () => {
   const theme = useTheme();
+
+  const navItems = [
+    { href: '#about', label: 'About' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#education', label: 'Education' },
+    { href: '#contact', label: 'Contact' }
+  ];
 
   return (
     <Nav>
       <NavContainer>
         <Logo href='#hero'>
           {theme.dark ? <img src={LogoImage} alt="logo" height={20} width={20}/> : <img src={LogoImageDark} alt="logo" height={20} width={20}/>}
-          <LogoText>{logoText}</LogoText>
+          <LogoText>Basher Kalim</LogoText>
         </Logo>
         
         <NavLinks>

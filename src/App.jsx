@@ -21,23 +21,18 @@ import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import Contact from './components/contact/Contact';
 import GridBackground from './components/grid-background/GridBackground';
+import Education from './components/education/Education';
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
 
-  const navItems = [
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#experience', label: 'Education' },
-    { href: '#contact', label: 'Contact' }
-  ];
+  
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <GlobalStyles />
       <GridBackground />
-      <Navigation logoText="Basher Kalim" navItems={navItems} />
+      <Navigation />
       <Wrapper>
       
       <MainContainer>
@@ -67,6 +62,9 @@ const App = () => {
         <Divider />
 
         <Projects />
+        <Divider />
+
+        <Education />
         <Divider />
 
         <Contact />
