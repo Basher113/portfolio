@@ -1,4 +1,25 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+
+
+const sizeStyles = {
+  sm: css`
+    height: 2rem;
+    padding: 0 0.75rem;
+    font-size: 0.75rem;
+  `,
+
+  md: css`
+    height: 2.5rem;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+  `,
+
+  lg: css`
+    height: 3rem;
+    padding: 0 1.5rem;
+    font-size: 0.875rem;
+  `,
+};
 
 export const PrimaryButton = styled.button`
   background-color: ${props => props.theme.dark ? '#ffffff' : '#141414'};
@@ -15,6 +36,8 @@ export const PrimaryButton = styled.button`
   transition: opacity 0.3s ease;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
+
+   ${({ $size }) => sizeStyles[$size] || sizeStyles.md}
 
   &:hover {
     opacity: 0.9;
@@ -41,6 +64,8 @@ export const SecondaryButton = styled.button`
   text-decoration: none;
   font-family: 'Inter', sans-serif;
 
+   ${({ $size }) => sizeStyles[$size] || sizeStyles.md}
+   
   &:hover {
     background-color: ${props => props.theme.dark ? '#1f1f1f' : '#f9fafb'};
   }
@@ -48,10 +73,4 @@ export const SecondaryButton = styled.button`
   &:active {
     transform: scale(0.98);
   }
-`;
-
-export const ButtonIcon = styled.span`
-  font-size: 0.875rem;
-  display: inline-flex;
-  align-items: center;
 `;

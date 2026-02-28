@@ -26,10 +26,6 @@ export const Logo = styled.div`
   gap: 0.5rem;
 `;
 
-export const LogoIcon = styled.span`
-  color: ${props => props.theme.dark ? '#ffffff' : '#141414'};
-`;
-
 export const LogoText = styled.span`
   font-size: 1.125rem;
   font-weight: 700;

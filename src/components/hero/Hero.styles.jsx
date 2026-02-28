@@ -68,4 +68,18 @@ export const HeroButtons = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 1.5rem;
 `;
+
+export const HeroSocialLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+`
+
+export const HeroSocialLInk = styled.a`
+
+  & > img {
+    width: 30px;
+    height: 30px;
+  }
+`

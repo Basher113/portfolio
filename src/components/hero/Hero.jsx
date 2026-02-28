@@ -7,45 +7,44 @@ import {
   HeroHighlight,
   HeroDescription,
   HeroButtons, 
-  HeroBg,
-  HeroWrapper
+  HeroWrapper,
+  HeroSocialLinks
 } from './Hero.styles';
+import CodeBranch from '../ui/code-branch/CodeBranch';
 
-const Hero = ({ 
-  title, 
-  highlight, 
-  description,
-  primaryButton,
-  secondaryButton 
-}) => {
+const Hero = () => {
   return (
     <HeroWrapper>
-      <HeroBg />
+    
     <HeroSection id="hero">
-      
       <HeroContent>
         <HeroTitle>
-          {title} <HeroHighlight>{highlight}</HeroHighlight>
+          Hi, I'm Basher! <HeroHighlight>Full stack Developer.</HeroHighlight>
         </HeroTitle>
         
-        <HeroDescription>{description}</HeroDescription>
+        <HeroDescription>I turn ideas into web apps, solve real problems, and keep leveling up along the way.</HeroDescription>
         
         <HeroButtons>
           <Button 
             variant="primary" 
-            href={primaryButton.href}
-            icon="arrow_forward"
+            href="#projects"
+            size='lg'
           >
-            {primaryButton.text}
+            See My Projects
           </Button>
           
           <Button 
             variant="secondary" 
-            href={secondaryButton.href}
+            href='#contact'
+            size='lg'
           >
-            {secondaryButton.text}
+            Get in Touch
           </Button>
         </HeroButtons>
+        <HeroSocialLinks>
+         
+        </HeroSocialLinks>
+
       </HeroContent>
     </HeroSection>
     </HeroWrapper>

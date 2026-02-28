@@ -6,7 +6,7 @@ import { Divider } from './styles/SharedStyles';
 import Navigation from './components/navigation/Navigation';
 import Hero from './components/hero/Hero';
 import Section from './components/section/Section';
-import SkillBadge from './components/skill-badge/SkillBadge';
+
 
 import {
   Wrapper,
@@ -15,22 +15,11 @@ import {
   AboutHighlight,
   AboutNotice,
   NoticeIcon,
-  SkillsGrid,
-  SkillCategory,
-  SkillCategoryTitle,
-  SkillBadges,
-  CurrentFocusBox,
-  ProjectsHeader,
-  ProjectsTitle,
-  ProjectsSubtitle,
-  ProjectsGrid,
-  ContactSection,
-  ContactEmail,
-  SocialLinks,
-  SocialLink,
-  Footer,
+
 } from './App.styles';
 import Projects from './components/projects/Projects';
+import Skills from './components/skills/Skills';
+import Contact from './components/contact/Contact';
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -54,13 +43,7 @@ const App = () => {
       <Wrapper>
       
       <MainContainer>
-        <Hero
-          title="Hi, I'm Basher!"
-          highlight="Full stack Developer."
-          description="I turn ideas into web apps, solve real problems, and keep leveling up along the way."
-          primaryButton={{ text: 'See My Projects', href: '#projects' }}
-          secondaryButton={{ text: 'Get in Touch', href: '#contact' }}
-        />
+        <Hero />
 
         <Divider />
 
@@ -80,57 +63,7 @@ const App = () => {
         <Divider />
 
         <Section id="skills" title="Skills & Stack">
-          <CurrentFocusBox>
-            <h3>
-              <span className="material-symbols-outlined">trending_up</span>
-              Current Focus
-            </h3>
-            <p>Currently exploring TypeScript </p>
-          </CurrentFocusBox>
-
-          <SkillsGrid>
-            <SkillCategory>
-              <SkillCategoryTitle>
-                <span className="material-symbols-outlined">palette</span>
-                Frontend
-              </SkillCategoryTitle>
-              <SkillBadges>
-                <SkillBadge>HTML5 / CSS3</SkillBadge>
-                <SkillBadge>JavaScript (ES6+)</SkillBadge>
-                <SkillBadge>React</SkillBadge>
-                <SkillBadge>Redux</SkillBadge>
-                <SkillBadge>Styled Components</SkillBadge>
-                <SkillBadge>Tailwind CSS</SkillBadge>
-              </SkillBadges>
-            </SkillCategory>
-
-            <SkillCategory>
-              <SkillCategoryTitle>
-                <span className="material-symbols-outlined">database</span>
-                Backend
-              </SkillCategoryTitle>
-              <SkillBadges>
-                <SkillBadge>Node.js</SkillBadge>
-                <SkillBadge>Python</SkillBadge>
-                <SkillBadge>Express</SkillBadge>
-                <SkillBadge>PostgreSQL</SkillBadge>
-                <SkillBadge>Prisma ORM</SkillBadge>
-              </SkillBadges>
-            </SkillCategory>
-
-            <SkillCategory>
-              <SkillCategoryTitle>
-                <span className="material-symbols-outlined">database</span>
-                Devops and tools
-              </SkillCategoryTitle>
-              <SkillBadges>
-                <SkillBadge>Docker</SkillBadge>
-                <SkillBadge>Github Actions</SkillBadge>
-                <SkillBadge>Git/Github</SkillBadge>
-                <SkillBadge>Postman</SkillBadge>
-              </SkillBadges>
-            </SkillCategory>
-          </SkillsGrid>
+          <Skills />
         </Section>
 
         <Divider />
@@ -138,20 +71,7 @@ const App = () => {
         <Projects />
         <Divider />
 
-        <ContactSection id="contact">
-          <h2>Start a Conversation</h2>
-          <ContactEmail href="mailto:hello@alexdev.design">
-            hello@alexdev.design
-          </ContactEmail>
-          <SocialLinks>
-            <SocialLink href="#">GitHub</SocialLink>
-            <SocialLink href="#">LinkedIn</SocialLink>
-            <SocialLink href="#">Twitter</SocialLink>
-          </SocialLinks>
-          <Footer>
-            © 2024 Alex Dev. Built with passion and constant learning.
-          </Footer>
-        </ContactSection>
+        <Contact />
       </MainContainer>
 
       </Wrapper>

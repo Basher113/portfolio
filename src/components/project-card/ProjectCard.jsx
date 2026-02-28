@@ -1,4 +1,4 @@
-import React from 'react';
+import { ExternalLink, Github, Sparkle } from 'lucide-react';
 import { 
   Card,
   CardImage,
@@ -14,6 +14,7 @@ import {
   CardTags,
   CardTag 
 } from './ProjectCard.styles';
+import KeyLearnings from './components/KeyLearnings';
 
 const ProjectCard = ({ 
   image,
@@ -27,21 +28,22 @@ const ProjectCard = ({
 }) => {
   return (
     <Card>
+      <a href={liveUrl} target='_blank' rel="noreferrer">
       <CardImage image={image}>
         {badge && <CardBadge>{badge}</CardBadge>}
       </CardImage>
-      
+      </a>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardLinks>
           {githubUrl && (
-            <CardLink href={githubUrl} aria-label="View code">
-              <span className="material-symbols-outlined">code</span>
+            <CardLink href={githubUrl} target='_blank' rel="noreferrer" aria-label="View code">
+              <Github size={20}/>
             </CardLink>
           )}
           {liveUrl && (
-            <CardLink href={liveUrl} aria-label="View live demo">
-              <span className="material-symbols-outlined">open_in_new</span>
+            <CardLink href={liveUrl} rel="noreferrer" aria-label="View live demo">
+              <ExternalLink size={20}/>
             </CardLink>
           )}
         </CardLinks>
@@ -50,17 +52,7 @@ const ProjectCard = ({
       <CardDescription>{description}</CardDescription>
       
       {learnings.length > 0 && (
-        <CardLearnings>
-          <LearningsTitle>
-            <span className="material-symbols-outlined">auto_awesome</span>
-            Key Learnings
-          </LearningsTitle>
-          <LearningsList>
-            {learnings.map((learning, index) => (
-              <li key={index}>{learning}</li>
-            ))}
-          </LearningsList>
-        </CardLearnings>
+        <KeyLearnings learnings={learnings}/>
       )}
       
       <CardTags>

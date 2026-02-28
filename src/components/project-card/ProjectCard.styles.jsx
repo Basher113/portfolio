@@ -17,7 +17,7 @@ export const CardImage = styled.div`
   background-position: center;
   position: relative;
   transition: transform 0.5s ease;
-
+  cursor: pointer;
   &:hover {
     transform: scale(1.05);
   }
@@ -84,18 +84,15 @@ export const LearningsTitle = styled.p`
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
+  display: inline;
+  padding: 2px;
   gap: 0.25rem;
-
-  .material-symbols-outlined {
-    font-size: 0.75rem;
-  }
+  background: rgba(98, 224, 255, 0.14);
 `;
 
 export const LearningsList = styled.ul`
   font-size: 0.875rem;
-  color: ${props => props.theme.dark ? '#9ca3af' : '#4b5563'};
+  color: ${props => props.theme.colors.textSecondary};
   list-style: disc;
   list-style-position: inside;
 
@@ -115,4 +112,5 @@ export const CardTags = styled.div`
 
 export const CardTag = styled.span`
   color: #9ca3af;
+
 `;

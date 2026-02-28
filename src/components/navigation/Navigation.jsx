@@ -1,10 +1,8 @@
-import React from 'react';
 import Button from '../ui/button/Button';
 import { 
   Nav, 
   NavContainer, 
   Logo, 
-  LogoIcon, 
   LogoText,
   NavLinks,
   NavLink 
@@ -15,7 +13,6 @@ const Navigation = ({ logoText = "Alex.Dev", navItems = [] }) => {
     <Nav>
       <NavContainer>
         <Logo>
-          <LogoIcon className="material-symbols-outlined">terminal</LogoIcon>
           <LogoText>{logoText}</LogoText>
         </Logo>
         
