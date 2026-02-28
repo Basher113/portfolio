@@ -1,8 +1,7 @@
-import Section from "../section/Section";
 import ProjectCard from "../project-card/ProjectCard";
 import { ProjectsHeader, ProjectsGrid, ProjectsSubtitle, ProjectsTitle } from "./Projects.styles"
-import BoardPapsImage from "../../assets/BoardPaps.jpg"
-import PapuStoreImage from "../../assets/papu-store.png"
+import BoardPapsImage from "../../assets/BoardPaps.webp"
+import PapuStoreImage from "../../assets/PapuStore.webp"
 const Projects = () => {
     const projects = [
     {
@@ -30,7 +29,7 @@ const Projects = () => {
         'Optimized server-state management using Redux Toolkit Query with caching, auto-refetching, and request deduplication.',
         'Integrated Paymongo for secure payment processing and checkout workflows.',
       ],
-      tags: ['React', 'Expressjs', 'Stripe API'],
+      tags: ['React', 'Expressjs', 'Paymongo'],
       liveUrl: 'https://papu-store.vercel.app'
     }
   ];

@@ -20,9 +20,10 @@ import {
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import Contact from './components/contact/Contact';
+import GridBackground from './components/grid-background/GridBackground';
 
 const App = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const navItems = [
     { href: '#about', label: 'About' },
@@ -32,13 +33,10 @@ const App = () => {
     { href: '#contact', label: 'Contact' }
   ];
 
-
-
-
-
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <GlobalStyles />
+      <GridBackground />
       <Navigation logoText="Basher Kalim" navItems={navItems} />
       <Wrapper>
       

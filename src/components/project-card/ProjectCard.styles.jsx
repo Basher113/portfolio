@@ -6,6 +6,7 @@ export const Card = styled.div`
 `;
 
 export const CardImage = styled.div`
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   aspect-ratio: 16 / 9;
   width: 100%;
   border-radius: 0.75rem;

@@ -10,7 +10,7 @@ import {
   HeroWrapper,
   HeroSocialLinks
 } from './Hero.styles';
-import CodeBranch from '../ui/code-branch/CodeBranch';
+
 
 const Hero = () => {
   return (
