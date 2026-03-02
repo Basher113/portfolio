@@ -11,17 +11,13 @@ import Section from './components/section/Section';
 import {
   Wrapper,
   MainContainer,
-  AboutText,
-  AboutHighlight,
-  AboutNotice,
-  NoticeIcon,
-
 } from './App.styles';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import Contact from './components/contact/Contact';
 import GridBackground from './components/grid-background/GridBackground';
 import Education from './components/education/Education';
+import About from './components/about/About';
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
@@ -36,21 +32,13 @@ const App = () => {
       <Wrapper>
       
       <MainContainer>
+        {/* HERO SECTION */}
         <Hero />
 
         <Divider />
 
         <Section id="about" title="About Me">
-          <AboutText>
-            It started with “let me try this” — and somehow turned into constantly pushing myself to build smarter, cleaner, cooler things.
-          </AboutText>
-          <AboutHighlight>
-            What started as a curiosity in senior high school turned into a hands-on adventure — mostly love it, occasionally hate it 😅. Udemy courses, YouTube tutorials, and CS50 helped me build the basics, while real projects taught me the rest. Learning never stops, and that's the best part.
-          </AboutHighlight>
-          <AboutNotice>
-            <NoticeIcon className="material-symbols-outlined">school</NoticeIcon>
-            <p>Currently documenting my progress through weekly technical blog posts and open-source contributions.</p>
-          </AboutNotice>
+          <About />
         </Section>
 
         <Divider />
