@@ -18,7 +18,7 @@ const Projects = () => {
       ],
       tags: ['React', 'Clerk', 'express'],
       githubUrl: 'https://github.com/Basher113/BoardPaps',
-      liveUrl: 'https://board-paps.vercel.app'
+      liveUrl: 'https://www.boardpaps.xyz'
     },
     {
       image: ShowcialsImage,
