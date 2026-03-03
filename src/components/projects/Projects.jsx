@@ -2,6 +2,7 @@ import ProjectCard from "../project-card/ProjectCard";
 import { ProjectsHeader, ProjectsGrid, ProjectsSubtitle, ProjectsTitle } from "./Projects.styles"
 import BoardPapsImage from "../../assets/BoardPaps.webp"
 import PapuStoreImage from "../../assets/PapuStore.webp"
+import ShowcialsImage from "../../assets/Showcials.webp"
 const Projects = () => {
     const projects = [
     {
@@ -18,6 +19,20 @@ const Projects = () => {
       tags: ['React', 'Clerk', 'express'],
       githubUrl: 'https://github.com/Basher113/BoardPaps',
       liveUrl: 'https://board-paps.vercel.app'
+    },
+    {
+      image: ShowcialsImage,
+      badge: 'Personal Project',
+      title: 'Showcials',
+      description: 'Full-stack platform where users can share show reviews, like and comment on posts, recommend shows to friends, and track watched and favorite content.',
+      learnings: [
+        'Integrated TanStack Query for efficient server-state management with caching, background refetching, and optimistic updates.',
+        'Leveraged TMDB API to fetch real-time movie and TV show data.',
+        'Implemented cursor based pagination.',
+      ],
+      tags: ['React', 'TanStack Query', 'TMDB API', 'Express'],
+      githubUrl: 'https://github.com/Basher113/Showcials',
+      
     },
     {
       image: PapuStoreImage,

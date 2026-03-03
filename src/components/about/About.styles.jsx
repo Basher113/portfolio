@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const AboutText = styled.p`
 
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.75;
 `;
 
