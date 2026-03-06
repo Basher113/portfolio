@@ -6,6 +6,7 @@ import { Divider } from './styles/SharedStyles';
 import Navigation from './components/navigation/Navigation';
 import Hero from './components/hero/Hero';
 import Section from './components/section/Section';
+import ResumeModal from './components/resume-modal/ResumeModal';
 
 
 import {
@@ -21,14 +22,16 @@ import About from './components/about/About';
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
-
-  
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <GlobalStyles />
       <GridBackground />
-      <Navigation />
+      <Navigation 
+        onResumeClick={() => setIsResumeModalOpen(true)} 
+      />
+      
       <Wrapper>
       
       <MainContainer>
@@ -57,6 +60,11 @@ const App = () => {
 
         <Contact />
       </MainContainer>
+
+      <ResumeModal 
+        isOpen={isResumeModalOpen} 
+        onClose={() => setIsResumeModalOpen(false)} 
+      />
 
       </Wrapper>
     </ThemeProvider>

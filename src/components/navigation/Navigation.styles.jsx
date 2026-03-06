@@ -50,7 +50,7 @@ export const NavLink = styled.a`
   color: inherit;
   text-decoration: none;
   transition: color 0.3s ease;
-
+  cursor: pointer;
   &:hover {
     color: #9ca3af;
   }

@@ -10,7 +10,7 @@ import {
 } from './Navigation.styles';
 import LogoImage from "../../assets/logo.webp";
 import LogoImageDark from "../../assets/logoDark.webp";
-const Navigation = () => {
+const Navigation = ({ onResumeClick }) => {
   const theme = useTheme();
 
   const navItems = [
@@ -35,9 +35,9 @@ const Navigation = () => {
               {item.label}
             </NavLink>
           ))}
+          <NavLink onClick={onResumeClick}>Resume</NavLink>
         </NavLinks>
         
-        <Button variant="primary">Resume</Button>
       </NavContainer>
     </Nav>
   );
