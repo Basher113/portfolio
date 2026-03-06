@@ -29,7 +29,9 @@ const App = () => {
       <GlobalStyles />
       <GridBackground />
       <Navigation 
-        onResumeClick={() => setIsResumeModalOpen(true)} 
+        onResumeClick={() => setIsResumeModalOpen(true)}
+        isDark={isDark}
+        onThemeToggle={() => setIsDark(!isDark)}
       />
       
       <Wrapper>
